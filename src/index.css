@@ -1,0 +1,215 @@
+@import "tailwindcss";
+
+/* -------------------------------------------------------------------------- */
+/* OKINE SANS: A MODERN SANS-SERIF FONT FAMILY                                 */
+/* -------------------------------------------------------------------------- */
+
+/* Light (300) - For descriptions, body narrative, sub-header details */
+@font-face {
+  font-family: 'Okine Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/OkineSans-Light.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/84249/MADEOkineSansPERSONALUSE-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MADE Okine Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/OkineSans-Light.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/84249/MADEOkineSansPERSONALUSE-Light.woff') format('woff');
+}
+
+/* Regular (400) - Standard reading weight */
+@font-face {
+  font-family: 'Okine Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/OkineSans-Regular.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/84249/MADEOkineSansPERSONALUSE-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MADE Okine Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/OkineSans-Regular.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/84249/MADEOkineSansPERSONALUSE-Regular.woff') format('woff');
+}
+
+/* Medium (500) - For sub-headers, kicker tags, pills, meta labels */
+@font-face {
+  font-family: 'Okine Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/OkineSans-Medium.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/84249/MADEOkineSansPERSONALUSE-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MADE Okine Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/OkineSans-Medium.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/84249/MADEOkineSansPERSONALUSE-Medium.woff') format('woff');
+}
+
+/* Bold (700) - For primary headers, impactful numbers, main section titles */
+@font-face {
+  font-family: 'Okine Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/OkineSans-Bold.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/84249/MADEOkineSansPERSONALUSE-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MADE Okine Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/OkineSans-Bold.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/84249/MADEOkineSansPERSONALUSE-Bold.woff') format('woff');
+}
+
+/* Black (900) - Display titles, brand wordmark, hero highlights */
+@font-face {
+  font-family: 'Okine Sans';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('/fonts/OkineSans-Black.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/84249/MADEOkineSansPERSONALUSE-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MADE Okine Sans';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('/fonts/OkineSans-Black.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/84249/MADEOkineSansPERSONALUSE-Black.woff') format('woff');
+}
+
+/* -------------------------------------------------------------------------- */
+/* THEME & TYPOGRAPHY SYSTEM                                                 */
+/* -------------------------------------------------------------------------- */
+
+@theme {
+  --font-sans: 'Okine Sans', 'MADE Okine Sans', 'MADE Okine Sans PERSONAL USE', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Okine Sans', 'MADE Okine Sans', 'MADE Okine Sans PERSONAL USE', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  /* Zero-radius architecture rule */
+  *, *::before, *::after {
+    border-radius: 0px !important;
+  }
+
+  html, body {
+    font-family: 'Okine Sans', 'MADE Okine Sans', 'MADE Okine Sans PERSONAL USE', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 300; /* Light for natural, elegant body copy */
+    letter-spacing: -0.012em;
+    background-color: #FAFBF8;
+    color: #072118;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* HEADERS: Bold when necessary */
+  h1, h2, h3, h4, h5, h6,
+  .font-heading,
+  .hero-headline,
+  .section-title {
+    font-family: 'Okine Sans', 'MADE Okine Sans', 'MADE Okine Sans PERSONAL USE', sans-serif;
+    font-weight: 700; /* Bold for headers */
+    letter-spacing: -0.025em;
+  }
+
+  h1 {
+    font-weight: 800;
+  }
+
+  /* SUB-HEADERS: Medium and Light when necessary */
+  .sub-header,
+  .sub-heading,
+  .subtitle,
+  .section-subtitle,
+  [data-typography="sub-header"] {
+    font-family: 'Okine Sans', 'MADE Okine Sans', sans-serif;
+    font-weight: 500; /* Medium for sub-headers */
+    letter-spacing: -0.01em;
+  }
+
+  /* Kicker tags, badges, and meta tags */
+  .badge,
+  .kicker,
+  [class*="tracking-wider"],
+  [class*="uppercase"] {
+    font-family: 'Okine Sans', 'MADE Okine Sans', sans-serif;
+    font-weight: 500; /* Medium for kicker labels */
+  }
+
+  /* BODY TEXT & DESCRIPTIONS: Light weight for clean modern editorial readability */
+  p,
+  li,
+  .body-copy,
+  .paragraph-text {
+    font-weight: 300; /* Light for reading */
+    line-height: 1.65;
+  }
+
+  strong, b {
+    font-weight: 700;
+  }
+}
+
+/* Custom weights utility helpers */
+.font-okine-light {
+  font-family: 'Okine Sans', 'MADE Okine Sans', sans-serif;
+  font-weight: 300 !important;
+}
+
+.font-okine-regular {
+  font-family: 'Okine Sans', 'MADE Okine Sans', sans-serif;
+  font-weight: 400 !important;
+}
+
+.font-okine-medium {
+  font-family: 'Okine Sans', 'MADE Okine Sans', sans-serif;
+  font-weight: 500 !important;
+}
+
+.font-okine-bold {
+  font-family: 'Okine Sans', 'MADE Okine Sans', sans-serif;
+  font-weight: 700 !important;
+}
+
+.font-okine-black {
+  font-family: 'Okine Sans', 'MADE Okine Sans', sans-serif;
+  font-weight: 900 !important;
+}
+
+/* Custom scrollbar with 0 radius */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAFBF8;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 0px !important;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
