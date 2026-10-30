@@ -32,9 +32,9 @@ export const MediaPage: React.FC<MediaPageProps> = ({
   const [activeMediaIndex, setActiveMediaIndex] = useState<number | null>(null);
 
   const categories = [
-    { label: 'All Photos', count: MEDIA_GALLERY.length, value: 'All' },
-    { label: 'Baba Agba Unity Cup & Sports', count: MEDIA_GALLERY.filter(m => m.category === 'Community Sports & Youth').length, value: 'Community Sports & Youth' },
-    { label: 'Engineering & Field Works', count: MEDIA_GALLERY.filter(m => m.category === 'Field Execution & Engineering').length, value: 'Field Execution & Engineering' }
+    { label: 'All', count: MEDIA_GALLERY.length, value: 'All' },
+    { label: 'Sports & Youth', count: MEDIA_GALLERY.filter(m => m.category === 'Community Sports & Youth').length, value: 'Community Sports & Youth' },
+    { label: 'Field Works', count: MEDIA_GALLERY.filter(m => m.category === 'Field Execution & Engineering').length, value: 'Field Execution & Engineering' }
   ].filter(cat => cat.count > 0);
 
   const filteredMedia = selectedCategory === 'All'
@@ -128,39 +128,26 @@ export const MediaPage: React.FC<MediaPageProps> = ({
       </header>
 
       {/* Hero Banner Section */}
-      <section className="bg-[#0A1913] text-white pt-16 pb-16 border-b border-white/10 relative overflow-hidden">
+      <section className="bg-[#0A1913] text-white pt-12 pb-12 border-b border-white/10 relative overflow-hidden">
         {/* Subtle Decorative Architectural Grid Background */}
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #84E262 1px, transparent 0)', backgroundSize: '36px 36px' }} />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-2 text-xs font-bold text-[#84E262] uppercase tracking-wider mb-3">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-2 text-xs font-bold text-[#84E262] uppercase tracking-wider mb-2">
               <Camera className="w-4 h-4" />
-              <span>Official Gallery & Photographic Archive</span>
-              <span aria-hidden="true">·</span>
-              <span className="text-neutral-400 font-normal">Gatplus Dynamic Resources Limited</span>
+              <span>Project & Community Gallery</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
-              Field Deployments, Youth Empowerment & Community Impact
+              Official Gallery
             </h1>
 
-            <p className="mt-4 text-sm sm:text-base text-neutral-300 leading-relaxed">
-              Explore the verified visual record documenting grassroots athletic championships, youth talent sponsorships, civil engineering foundations, and institutional procurement deliveries orchestrated under the visionary leadership of CEO <strong className="text-white">Hon. Gbenga Abiodun Eleduma (Baba Agba 1)</strong>.
+            <p className="mt-3 text-sm sm:text-base text-neutral-300 leading-relaxed">
+              Photographic records of community youth sports, talent sponsorship, and field engineering executions.
             </p>
-
-            {/* Unboxed Minimalist Metadata Divider */}
-            <div className="mt-6 flex flex-wrap items-center gap-y-2 gap-x-4 text-xs text-neutral-400 font-medium">
-              <span>9 Grassroots Tournament Highlights</span>
-              <span aria-hidden="true" className="text-neutral-600">·</span>
-              <span>Baba Agba Unity Cup Finals</span>
-              <span aria-hidden="true" className="text-neutral-600">·</span>
-              <span>Federal Procurement Executions</span>
-              <span aria-hidden="true" className="text-neutral-600">·</span>
-              <span>High-Resolution Photo Gallery</span>
-            </div>
           </div>
         </div>
       </section>
@@ -282,13 +269,13 @@ export const MediaPage: React.FC<MediaPageProps> = ({
           <div className="space-y-3 max-w-xl text-center md:text-left">
             <div className="text-xs font-bold text-[#84E262] uppercase tracking-wider flex items-center justify-center md:justify-start gap-2">
               <Trophy className="w-4 h-4" />
-              <span>Community Leadership & Corporate Partnership</span>
+              <span>Community Impact</span>
             </div>
             <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Empowering Grassroots Talent Across Nigerian Communities
+              Empowering Grassroots Talent
             </h3>
             <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed">
-              Through the continuous sponsorship of athletic tournaments, educational development initiatives, and technical infrastructure support, Gatplus Dynamic remains committed to societal advancement and youth development.
+              Supporting sports championships, talent development, and community infrastructure projects.
             </p>
           </div>
 
